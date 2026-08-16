@@ -1,0 +1,103 @@
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f4f5f3;
+  color: #222;
+  margin: 0;
+}
+input, select, textarea, button { font-family: inherit; }
+
+/* --- auth --- */
+.auth-page { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+.auth-card { background: #fff; border-radius: 12px; padding: 32px; width: 100%; max-width: 360px; border: 1px solid #e2e2df; }
+.auth-card h1 { font-size: 20px; margin: 0 0 4px; }
+.auth-card .subtitle { font-size: 13px; color: #666; margin: 0 0 20px; }
+.auth-card label { font-size: 12px; color: #999; text-transform: uppercase; display: block; margin: 12px 0 4px; }
+.auth-card input, .auth-card select {
+  width: 100%; border: 1px solid #ddd; border-radius: 8px; padding: 9px 11px; font-size: 14px;
+}
+.auth-card button {
+  width: 100%; margin-top: 20px; border: none; background: #222; color: #fff; padding: 10px 12px;
+  border-radius: 8px; font-size: 14px; cursor: pointer;
+}
+.auth-switch { font-size: 13px; color: #666; text-align: center; margin-top: 16px; }
+.error-text { color: #a51b1b; font-size: 13px; background: #fdecea; padding: 8px 10px; border-radius: 8px; }
+
+/* --- shell --- */
+.app-shell { max-width: 1000px; margin: 0 auto; padding: 32px 20px 60px; }
+.app-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; }
+.app-header h1 { font-size: 22px; font-weight: 600; margin: 0 0 4px; }
+.subtitle { font-size: 14px; color: #666; margin: 0; }
+.header-right { display: flex; align-items: center; gap: 10px; }
+.user-pill { font-size: 12px; background: #efefec; padding: 6px 10px; border-radius: 20px; color: #444; }
+
+.tabs { display: flex; gap: 6px; margin-bottom: 18px; border-bottom: 1px solid #e2e2df; }
+.tab-btn {
+  text-decoration: none; padding: 10px 4px; margin-right: 18px; font-size: 14px; color: #999;
+  border-bottom: 2px solid transparent;
+}
+.tab-btn.active { color: #222; font-weight: 600; border-bottom-color: #222; }
+
+.panel { background: #fff; border-radius: 12px; border: 1px solid #e2e2df; padding: 20px 22px; margin-bottom: 20px; }
+.panel-title { font-size: 14px; font-weight: 600; margin: 0 0 14px; color: #333; }
+.note { font-size: 13px; color: #666; margin: 10px 0 0; }
+.field-label { font-size: 11px; text-transform: uppercase; letter-spacing: .03em; color: #999; margin: 12px 0 4px; }
+
+.small-btn {
+  border: 1px solid #cfcfcb; background: #fff; padding: 7px 14px; border-radius: 8px; font-size: 13px; cursor: pointer; color: #333;
+}
+.small-btn:hover { background: #f2f2ef; }
+
+/* --- plantel --- */
+.player-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
+.player-card { background: #fff; border: 1px solid #e2e2df; border-radius: 12px; padding: 14px; text-align: center; cursor: pointer; position: relative; }
+.player-card:hover { border-color: #bbb; }
+.avatar {
+  width: 64px; height: 64px; border-radius: 50%; margin: 0 auto 8px; background: #eee; background-size: cover;
+  background-position: center; display: flex; align-items: center; justify-content: center; font-size: 20px; color: #999; font-weight: 600;
+}
+.pname { font-size: 13px; font-weight: 600; }
+.pposition { font-size: 11px; color: #999; margin-top: 2px; }
+.status-icon {
+  position: absolute; top: 8px; right: 8px; width: 24px; height: 24px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; font-size: 13px; cursor: pointer;
+}
+.status-icon.apto { background: #eaf7ec; color: #1e7e34; }
+.status-icon.carga_controlada { background: #fff8e1; color: #92610a; }
+.status-icon.lesionado { background: #fdecea; color: #a51b1b; }
+
+/* --- modal de perfil --- */
+.modal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.45); display: flex; align-items: center; justify-content: center;
+  z-index: 1000; padding: 20px;
+}
+.modal-card {
+  background: #fff; border-radius: 12px; padding: 20px 22px; max-width: 640px; width: 100%; max-height: 90vh; overflow-y: auto;
+}
+.detail-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.detail-head .tag { font-size: 14px; font-weight: 600; }
+.detail-head button { border: none; background: none; color: #999; cursor: pointer; font-size: 20px; }
+
+.profile-photo-row { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+.profile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 6px; }
+.profile-grid label { font-size: 11px; color: #999; text-transform: uppercase; display: block; margin-bottom: 4px; }
+.profile-grid input, .profile-grid select { width: 100%; border: 1px solid #ddd; border-radius: 8px; padding: 8px 10px; font-size: 14px; }
+
+textarea { width: 100%; border: 1px solid #ddd; border-radius: 8px; padding: 9px 11px; font-size: 14px; min-height: 80px; resize: vertical; }
+
+.injury-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 10px; }
+.injury-row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.injury-row input { border: 1px solid #ddd; border-radius: 8px; padding: 7px 10px; font-size: 13px; }
+.rm-btn { border: none; background: none; color: #b5b5b0; cursor: pointer; font-size: 15px; }
+.rm-btn:hover { color: #c0392b; }
+input[type="text"], input[type="number"], input[type="date"] { font-family: inherit; }
+
+/* --- impresión: solo la grilla del microciclo --- */
+@media print {
+  body * { visibility: hidden; }
+  #microciclo-grid-print, #microciclo-grid-print * { visibility: visible; }
+  #microciclo-grid-print { position: absolute; left: 0; top: 0; width: 100%; }
+  .no-print { display: none !important; }
+}
+
+.subtitle.warn { color: #92610a; background: #fff8e1; padding: 8px 12px; border-radius: 8px; }
